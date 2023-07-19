@@ -12,6 +12,18 @@
                 "en": "publisher-mfe",
                 "it": "publisher-mfe"
             }
+        },
+        {
+            "name": "subscriber-mfe",
+            "customElement": "subscriber-mfe",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "subscriber-mfe",
+                "it": "subscriber-mfe"
+            }
         }
     ],
     "svc": [],
