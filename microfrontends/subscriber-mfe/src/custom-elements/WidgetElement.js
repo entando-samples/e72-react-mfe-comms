@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App';
+import { mediatorInstance } from '@entando/mfecommunication';
 
 const EVENTS = {
   greeting: 'greeting',
@@ -11,7 +12,10 @@ class WidgetElement extends HTMLElement {
   constructor() {
     super();
     this.name = null;
-    this.subscribeToWidgetEvent(EVENTS.greeting, (evt) => this.onGreeting(evt.detail.name));
+
+    this.subscribeToWidgetEvent(EVENTS.greeting, (evt) => {
+        this.onGreeting(evt.name)
+    });
   }
 
   connectedCallback() {
@@ -21,7 +25,10 @@ class WidgetElement extends HTMLElement {
   }
 
   subscribeToWidgetEvent(eventType, eventHandler) {
-    window.addEventListener(eventType, eventHandler);
+    mediatorInstance.subscribe(eventType, {
+        callerId: "subscriber-mfe",
+        callback: eventHandler
+    });
   }
 
   onGreeting(name) {

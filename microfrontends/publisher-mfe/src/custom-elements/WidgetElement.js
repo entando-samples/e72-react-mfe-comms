@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from '../App';
+import { mediatorInstance } from '@entando/mfecommunication';
 
 const EVENTS = {
   greeting: 'greeting',
@@ -20,8 +21,7 @@ class WidgetElement extends HTMLElement {
   }
 
   publishWidgetEvent(eventId, detail) {
-    const widgetEvent = new CustomEvent(eventId, { detail });
-    window.dispatchEvent(widgetEvent);
+    mediatorInstance.publish(eventId, detail);
   }
 
   render() {

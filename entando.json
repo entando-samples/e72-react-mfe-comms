@@ -28,7 +28,7 @@
     ],
     "svc": [],
     "name": "e72-react-mfe-comms",
-    "version": "0.0.1",
+    "version": "0.0.2",
     "description": "e72-react-mfe-comms description",
     "type": "bundle"
 }
