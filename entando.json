@@ -1,0 +1,22 @@
+{
+    "microservices": [],
+    "microfrontends": [
+        {
+            "name": "publisher-mfe",
+            "customElement": "publisher-mfe",
+            "stack": "react",
+            "type": "widget",
+            "group": "free",
+            "publicFolder": "public",
+            "titles": {
+                "en": "publisher-mfe",
+                "it": "publisher-mfe"
+            }
+        }
+    ],
+    "svc": [],
+    "name": "e72-react-mfe-comms",
+    "version": "0.0.1",
+    "description": "e72-react-mfe-comms description",
+    "type": "bundle"
+}
