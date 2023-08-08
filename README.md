@@ -12,4 +12,8 @@ This project is a bundle with two React MFEs (publisher-mfe, subscriber-mfe) to 
 4. ent bundle install
 
 See https://developer.entando.com for more information.
+
+## History
+* v0.0.1 First version, based on straight CustomEvents
+* v0.0.2 Updated to use @entando/mfecommunication
  
